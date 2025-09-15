@@ -1,0 +1,624 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Host Grotesk", sans-serif;
+  color: #000;
+  background-color: #ffffff;
+}
+
+/* ---NAVBAR--- */
+
+header {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+.navbar-large {
+  min-height: 90px; 
+}
+.navbar-brand img {
+  max-height: 60px;
+}
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.25rem 0.5rem;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler-v svg {
+  display: block;
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus {
+  font-family: 'Host Grotesk', sans-serif !important;
+  color: #000 !important;
+  font-size: 0.8em;
+  font-weight: 550;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  background: none;
+  box-shadow: none;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus-visible {
+  color: #d66800 !important; 
+}
+.navbar.sticky-top {
+  z-index: 1050;
+}
+
+/* ---BANNER--- */
+
+.banner-video {
+  position: relative;
+  width: 100%;
+  height: 30vh; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  position: relative;
+  z-index: 3;
+}
+.banner-video::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(8, 8, 8, 0.87);
+  z-index: 2;
+  pointer-events: none;
+}
+.banner-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  gap: 0.5rem;
+  font-family: 'Cinzel', serif !important;
+}
+.airport-anim {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Cinzel', serif !important;
+}
+.fixed-word {
+  color: #fff;
+  font-family: 'Cinzel', serif !important;
+}
+.splitflap-word {
+  display: inline-flex;
+  gap: 0.12em;
+  min-width: 11ch;
+  max-width: 11ch;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flap-letter {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  color: #fff;
+  font-size: inherit;
+  perspective: 200px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+.flap-flip {
+  animation: flapFlip 0.25s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes flapFlip {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(90deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* mision styles */
+
+.sec-mision{
+    display: flex;
+    text-align: center;
+    padding: 60px;
+}
+.div-mision{
+
+  .h2-mision{
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Services Section */
+
+.h3-services{
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.sec-services {
+  padding: 0;
+  background: transparent;
+  margin-top: 5rem;
+}
+.div-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+.service-card {
+  display: block;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  transition: none;
+  height: 100%;
+}
+.service-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.img-service {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  filter: brightness(0.6);
+  transition: filter 0.3s;
+}
+.service-card:hover .img-service {
+  filter: brightness(1.1);
+}
+.service-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.918);
+  pointer-events: none;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.img-service {
+  position: relative;
+  z-index: 0;
+}
+.service-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.432);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/*countrys*/
+
+.sec-destinos{
+  margin-top: 5rem;
+  padding: 8%;
+}
+.h3-destinos{
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.destino-bloque {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.destino-bloque .destino-texto {
+  text-align: left;
+}
+.destino-bloque:nth-child(even) {
+  direction: rtl;
+}
+.destino-bloque:nth-child(even) .destino-texto {
+  direction: ltr;
+  text-align: right;
+}
+.destino-imagen img {
+  width: 40%;       
+  height: auto;       
+  display: block;
+}
+.destino-texto h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.destino-texto p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.destino-imagen, .destino-texto {
+  transition: transform 0.4s ease;
+}
+.destino-imagen:hover {
+  transform: scale(1.08);
+}
+.destino-texto:hover {
+  transform: scale(1.08);
+}
+
+
+
+
+
+/* --- PAGINA DESTINOS--- */
+
+/* --- Estilos del contenedor principal --- */
+.custom-layout-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+/* --- Estilos del Título --- */
+.layout-title {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Contenedor Grid para las dos columnas --- */
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Mantiene la proporción 2/3 y 1/3 */
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* --- Estilos del bloque de texto y de la imagen --- */
+.text-block p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Estilos del párrafo final --- */
+.full-width-paragraph {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* --- RESPONSIVIDAD PARA CELULARES --- */
+@media (max-width: 768px) {
+  .main-content-grid {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    /* El texto aparecerá encima de la imagen en móviles */
+  }
+
+  .layout-title {
+    font-size: 2rem; /* Achicamos un poco el título */
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  /* CAMBIO: Ya NO apilamos las columnas. Mantenemos la grilla de 2fr 1fr. */
+  /* Solo ajustamos los tamaños y espaciados para que quepa todo. */
+
+  .custom-layout-section {
+    padding: 0 1rem; /* Reducimos el padding lateral en móviles */
+  }
+  
+  .main-content-grid {
+    gap: 1rem; /* Reducimos el espacio entre columnas */
+  }
+
+  .layout-title {
+    font-size: 1.8rem; /* Hacemos el título más pequeño */
+  }
+
+  .text-block p, .full-width-paragraph {
+    font-size: 0.9rem; /* Hacemos el texto de los párrafos más pequeño */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer styles */
+
+.img-foot-logo{
+  max-width: 50%;
+}
+.footer-color{
+    background-color: #0a0d17;
+}
+
+/* ---ANIMACION WEB COMPLETA--- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Banner responsive para móvil */
+
+@media (max-width: 768px) {
+  .banner-video {
+    height: 22vh;
+    min-height: 100px;
+    max-height: 180px;
+  }
+  .banner-content h1,
+  .airport-anim {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  .typewriter-word {
+    min-width: 9ch;
+    font-size: 1em;
+    border-right: 1.5px solid #fff;
+  }
+}
+
+/* Banner responsive para pantallas muy pequeñas */
+
+@media (max-width: 400px) {
+  .banner-content h1,
+  .airport-anim {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  .typewriter-word {
+    min-width: 7ch;
+    font-size: 0.95em;
+    border-right: 1px solid #fff;
+  }
+}
+
+/* Responsive adjustments */
+
+@media (min-width: 992px) {
+  .div-services {
+    flex-wrap: nowrap;
+  }
+  .service-card {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .img-service {
+    border-radius: 0;
+    height: 320px;
+  }
+}
+
+/* 2x2 en mobile */
+
+@media (max-width: 991px) {
+  .img-service {
+    height: 180px;
+  }
+}
+@media (max-width: 575px) {
+  .img-service {
+    height: 130px; /* Más rectangular en mobile */
+  }
+  .service-label {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- NUEVA VISTA PARA MÓVILES --- */
+
+@media (max-width: 768px) {
+  .destino-bloque {
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+  }
+  .destino-bloque:nth-child(even) {
+    direction: rtl;
+  }
+  .destino-bloque:nth-child(even) .destino-texto {
+    direction: ltr;
+    text-align: right;
+  }
+  .destino-imagen img {
+    height: 120px;
+    width: 120px;
+    border-radius: 4px;
+    object-fit: cover; 
+  }
+  .destino-texto h4 {
+    font-size: 1.2rem;
+  }
+  .destino-texto p {
+    font-size: 0.9rem;
+  }
+}
